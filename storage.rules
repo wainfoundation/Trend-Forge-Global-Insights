@@ -1,0 +1,46 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Allow public read access to article images
+    match /articles/{articleId}/{allImages=**} {
+      allow read: if true;
+      allow write: if request.auth != null && 
+                    (exists(/databases/$(database)/documents/users/$(request.auth.uid)) && 
+                     (get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin' || 
+                      get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'journalist'));
+    }
+    
+    // Allow users to read and write their own profile images
+    match /users/{userId}/{allImages=**} {
+      allow read: if true;
+      allow write: if request.auth != null && 
+                    (request.auth.uid == userId || 
+                     exists(/databases/$(database)/documents/users/$(request.auth.uid)) && 
+                     get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin');
+    }
+    
+    // Allow admins to read and write all files
+    match /{allPaths=**} {
+      allow read, write: if request.auth != null && 
+                           exists(/databases/$(database)/documents/users/$(request.auth.uid)) && 
+                           get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
+    
+    // Allow journalists to read and write their own article images
+    match /articles/{articleId}/{allImages=**} {
+      allow read, write: if request.auth != null && 
+                           exists(/databases/$(database)/documents/users/$(request.auth.uid)) && 
+                           get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'journalist' && 
+                           exists(/databases/$(database)/documents/articles/$(articleId)) && 
+                           get(/databases/$(database)/documents/articles/$(articleId)).data.authorId == request.auth.uid;
+    }
+    
+    // Allow public read access to category images
+    match /categories/{allImages=**} {
+      allow read: if true;
+      allow write: if request.auth != null && 
+                     exists(/databases/$(database)/documents/users/$(request.auth.uid)) && 
+                     get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
+  }
+}
