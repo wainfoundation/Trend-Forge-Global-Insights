@@ -1,0 +1,137 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Common security functions
+    function isSignedIn() {
+      return request.auth != null;
+    }
+    
+    function isAdmin() {
+      return isSignedIn() && 
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
+    
+    function isJournalist() {
+      return isSignedIn() && 
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'journalist';
+    }
+    
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+    
+    function hasValidFields(requiredFields) {
+      return request.resource.data.keys().hasAll(requiredFields);
+    }
+    
+    function isNotModified(field) {
+      return request.resource.data[field] == resource.data[field];
+    }
+    
+    function isValidArticle() {
+      let requiredFields = ['title', 'content', 'categoryId', 'authorId', 'createdAt'];
+      return hasValidFields(requiredFields) && 
+        request.resource.data.title.size() >= 5 && 
+        request.resource.data.title.size() <= 100 &&
+        request.resource.data.content.size() >= 100;
+    }
+    
+    // Allow public read access to articles
+    match /articles/{articleId} {
+      allow read: if true;
+      
+      // Only allow write if user is admin or journalist and is the author
+      allow create: if isSignedIn() && 
+                      (isAdmin() || 
+                       (isJournalist() && request.resource.data.authorId == request.auth.uid)) &&
+                      isValidArticle();
+      
+      allow update: if isSignedIn() && 
+                      (isAdmin() || 
+                       (isJournalist() && resource.data.authorId == request.auth.uid)) &&
+                      isValidArticle();
+      
+      allow delete: if isSignedIn() && 
+                      (isAdmin() || 
+                       (isJournalist() && resource.data.authorId == request.auth.uid));
+    }
+    
+    // Allow users to read and write their own data
+    match /users/{userId} {
+      // Allow users to read their own data or admins to read any user data
+      allow read: if isSignedIn() && (isOwner(userId) || isAdmin());
+      
+      // Allow users to update their own data with restrictions
+      allow update: if isSignedIn() && 
+                      (isOwner(userId) || isAdmin()) &&
+                      (!isOwner(userId) || isNotModified('role')); // Users can't change their own role
+      
+      // Only admins can create or delete users
+      allow create, delete: if isAdmin();
+    }
+    
+    // Allow admins to read and write all data
+    match /{document=**} {
+      allow read, write: if isAdmin();
+    }
+    
+    // Allow public read access to categories
+    match /categories/{categoryId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+    
+    // Allow public read access to journalist profiles
+    match /journalists/{journalistId} {
+      allow read: if true;
+      
+      // Allow journalists to update their own profile or admins to update any profile
+      allow write: if isSignedIn() && 
+                     (isOwner(journalistId) || isAdmin());
+    }
+    
+    // Subscription data
+    match /subscriptions/{subscriptionId} {
+      allow read: if isSignedIn() && 
+                    (resource.data.userId == request.auth.uid || isAdmin());
+      
+      allow create: if isSignedIn() && 
+                      request.resource.data.userId == request.auth.uid;
+      
+      allow update: if isSignedIn() && 
+                      (resource.data.userId == request.auth.uid || isAdmin());
+      
+      allow delete: if isAdmin();
+    }
+    
+    // Payment history
+    match /payments/{paymentId} {
+      allow read: if isSignedIn() && 
+                    (resource.data.userId == request.auth.uid || isAdmin());
+      
+      // Only system or admin can create payment records
+      allow create, update, delete: if isAdmin();
+    }
+    
+    // Reading history
+    match /readingHistory/{historyId} {
+      allow read: if isSignedIn() && 
+                    resource.data.userId == request.auth.uid;
+      
+      allow create: if isSignedIn() && 
+                      request.resource.data.userId == request.auth.uid;
+      
+      allow update, delete: if isSignedIn() && 
+                              resource.data.userId == request.auth.uid;
+    }
+    
+    // Pi Network payments
+    match /piPayments/{paymentId} {
+      allow read: if isSignedIn() && 
+                    (resource.data.userId == request.auth.uid || isAdmin());
+      
+      // Only system or admin can create/update payment records
+      allow create, update, delete: if isAdmin();
+    }
+  }
+}
