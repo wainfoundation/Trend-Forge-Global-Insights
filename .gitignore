@@ -1,0 +1,73 @@
+# Expo
+.expo/
+dist/
+web-build/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+
+# Node
+node_modules/
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macOS
+.DS_Store
+*.pem
+
+# Local env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# TypeScript
+*.tsbuildinfo
+
+# Firebase
+firebase-debug.log
+firebase-debug.*.log
+.firebase/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+logs
+*.log
+
+# Build
+build/
+out/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Coverage
+coverage/
+
+# Expo web
+web-build/
+web-report/
+
+# EAS
+.eas/
+
+# Sentry
+.sentryclirc
+
+# Misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
