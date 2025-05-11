@@ -1,126 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TrendForge - Pi-powered News</title>
-  <meta name="description" content="Your Pi-powered gateway to world news, business, science, and culture.">
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
-  
-  <!-- Pi SDK -->
-  <script src="https://sdk.minepi.com/pi-sdk.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trend Forge</title>
+  <!-- Pi SDK script -->
+  <script id="pi-sdk-script" src="https://sdk.minepi.com/pi-sdk.js"></script>
   <script>
-    window.addEventListener('load', function() {
-      // Initialize Pi SDK when page loads
-      if (window.Pi) {
-        console.log('Pi SDK loaded directly from HTML');
-        window.Pi.init({ version: "2.0", sandbox: true });
-      } else {
-        console.error('Pi SDK not available after direct loading in HTML');
-        
-        // Check if we're in Pi Browser
-        const isPiBrowser = navigator.userAgent.toLowerCase().includes('pibrowser') || 
-                           navigator.userAgent.toLowerCase().includes('pi-browser') || 
-                           navigator.userAgent.toLowerCase().includes('pi browser');
-        
-        if (!isPiBrowser) {
-          console.warn('Not running in Pi Browser. Pi SDK features may not work correctly.');
-          
-          // Create a notification element
-          setTimeout(function() {
-            const notification = document.createElement('div');
-            notification.style.position = 'fixed';
-            notification.style.top = '0';
-            notification.style.left = '0';
-            notification.style.right = '0';
-            notification.style.backgroundColor = 'rgba(255, 107, 107, 0.9)';
-            notification.style.color = 'white';
-            notification.style.padding = '12px';
-            notification.style.textAlign = 'center';
-            notification.style.zIndex = '9999';
-            notification.style.fontFamily = 'Arial, sans-serif';
-            notification.style.fontSize = '14px';
-            notification.style.fontWeight = 'bold';
-            
-            notification.innerHTML = 'Pi Network features require Pi Browser. <a href="https://app.minepi.com" style="color: white; text-decoration: underline;">Open in Pi Browser</a>';
-            
-            document.body.appendChild(notification);
-          }, 2000);
+    // Initialize Pi SDK securely using environment variables
+    document.addEventListener('DOMContentLoaded', function() {
+      if (typeof Pi !== 'undefined') {
+        try {
+          // Use environment variables for sandbox mode
+          Pi.init({ 
+            version: "2.0", 
+            sandbox: process.env.NODE_ENV !== 'production' 
+          });
+          console.log('Pi SDK initialized from index.html');
+        } catch (error) {
+          console.error('Error initializing Pi SDK from index.html:', error);
         }
+      } else {
+        console.log('Pi SDK not available');
       }
     });
   </script>
-  
-  <!-- Content Security Policy -->
-  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; script-src * 'self' 'unsafe-inline' 'unsafe-eval' https://sdk.minepi.com https://api.minepi.com; style-src * 'self' 'unsafe-inline'; media-src *; img-src * 'self' data: content:; connect-src * 'self' https://sdk.minepi.com https://api.minepi.com;">
-  
-  <!-- App manifest -->
-  <link rel="manifest" href="/manifest.json">
-  
-  <!-- Theme color -->
-  <meta name="theme-color" content="#000000">
-  
-  <!-- iOS specific -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
-  
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    }
-    #root {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-    .pi-browser-banner {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background-color: #7D4698;
-      color: white;
-      padding: 12px;
-      text-align: center;
-      z-index: 9999;
-      font-family: Arial, sans-serif;
-      font-size: 14px;
-      display: none;
-    }
-    .pi-browser-banner a {
-      color: white;
-      text-decoration: underline;
-      font-weight: bold;
-      margin-left: 8px;
-    }
-  </style>
 </head>
 <body>
   <div id="root"></div>
-  
-  <div class="pi-browser-banner" id="pi-browser-banner">
-    Pi Network features require Pi Browser.
-    <a href="https://app.minepi.com" target="_blank">Open in Pi Browser</a>
-  </div>
-  
-  <script>
-    // Check if we're in Pi Browser
-    function isPiBrowser() {
-      const userAgent = navigator.userAgent.toLowerCase();
-      return userAgent.includes('pibrowser') || 
-             userAgent.includes('pi-browser') || 
-             userAgent.includes('pi browser');
-    }
-    
-    // Show banner if not in Pi Browser
-    if (!isPiBrowser()) {
-      document.getElementById('pi-browser-banner').style.display = 'block';
-    }
-  </script>
 </body>
 </html>
