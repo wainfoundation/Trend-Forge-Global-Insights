@@ -1,0 +1,33 @@
+{
+  "name": "Trend Forge - Pi-powered News",
+  "short_name": "Trend Forge",
+  "description": "Your Pi-powered gateway to world news, business, science, and culture.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#e3120b",
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "permissions": [
+    "https://sdk.minepi.com/*",
+    "https://api.minepi.com/*",
+    "https://app.minepi.com/*"
+  ],
+  "related_applications": [
+    {
+      "platform": "web",
+      "url": "https://app.minepi.com"
+    }
+  ],
+  "prefer_related_applications": false
+}
