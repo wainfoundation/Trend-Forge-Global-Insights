@@ -6,7 +6,7 @@ export default function App() {
 
   useEffect(() => {
     // Use your local IP here instead of 127.0.0.1
-    fetch('http://192.168.0.123:3000/api/greeting')
+    fetch('http://192.168.1.14:3000/api/greeting')
       .then(res => res.json())
       .then(data => setMessage(data.message))
       .catch(err => {
