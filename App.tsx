@@ -5,13 +5,12 @@ export default function App() {
   const [message, setMessage] = useState('Loading...');
 
   useEffect(() => {
-    // Use your local IP here instead of 127.0.0.1
-    fetch('http://192.168.1.14:3000/api/greeting')
-      .then(res => res.json())
-      .then(data => setMessage(data.message))
-      .catch(err => {
-        console.error(err);
-        setMessage('Failed to fetch');
+    fetch('http://192.168.1.14:3000/api/greeting') // <-- use your PC local IP here
+      .then((res) => res.json())
+      .then((data) => setMessage(data.message))
+      .catch((error) => {
+        console.error('Fetch error:', error);
+        setMessage('Failed to fetch from server');
       });
   }, []);
 
