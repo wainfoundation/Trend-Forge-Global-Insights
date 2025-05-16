@@ -37,6 +37,7 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "privacy": "public"
   }
 }
