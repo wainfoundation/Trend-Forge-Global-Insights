@@ -87,7 +87,7 @@ This guide provides step-by-step instructions for setting up the TrendForge.blog
 
 Keep your domain authorization code in a secure place:
 ```
-rNmqjkyKduwhpunimyylvy4f7uwump
+
 ```
 
 This code is required for domain transfers and certain administrative actions.
