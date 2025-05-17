@@ -1,61 +1,107 @@
-📄 Trend Forge | MrWain Organization
-Venture Funding Proposal
-Date: \[5/17/25]
+# 📄 Trend Forge | MrWain Organization
 
-🔷 About Trend Forge
-Trend Forge is a pioneering decentralized insights platform under the MrWain nonprofit organization. Designed for the Pi Network ecosystem, it empowers users to discover and act on global trends across business, technology, society, and culture. Through crowdsourced intelligence, gamified data contribution, and Pi-based rewards, we offer a next-generation experience for understanding what’s trending—powered by the people.
+**Venture Funding Proposal**
+**Date:** May 17, 2025
 
-As part of the MrWain Organization, we share a mission to develop ethical, inclusive, and impactful digital applications for the Pi ecosystem and beyond.
+---
 
-✅ Long-Term Vision
-Trend Forge is committed to growing alongside the Pi Network. As Pi evolves, so will our tools, insights, and services. We envision a robust network of Pi-powered apps where Trend Forge serves as the intelligence layer guiding communities and businesses into the future.
+## 🔷 About Trend Forge
 
-🔷 Purpose of This Proposal
-We are seeking funding support from Pi Network Ventures, ecosystem builders, and mission-aligned partners who believe in the value of decentralized knowledge systems. This proposal outlines our project vision and how any voluntary support will help sustain and scale Trend Forge.
+**Trend Forge** is a next-generation decentralized insights platform developed under the **MrWain Organization**, a nonprofit dedicated to ethical innovation within the **Pi Network ecosystem**.
+Trend Forge empowers users to discover and act on emerging global trends across **business, technology, society, and culture**—all through **crowdsourced intelligence**, **gamified participation**, and **Pi-based rewards**.
 
-🔷 Important Disclaimers
-Trend Forge is part of MrWain, a nonprofit organization. We:
+Our mission is to democratize knowledge by making real-time, people-powered insights available to all.
 
-* Do not offer equity, tokens, or financial returns for contributions
-* Cannot guarantee 100% success, but will commit fully to our goals
-* Will not treat contributions as loans or promise payback
-* Recognize that all support is at-risk, voluntary, and based on shared belief in the Pi ecosystem
+As part of MrWain, we are committed to building inclusive and impact-driven digital applications that strengthen the Pi ecosystem and serve the greater good.
 
-We cannot define the exact amount needed upfront. Final funding decisions rest solely with the Pi Core Team and will be based on their internal criteria and risk assessments.
+---
 
-🔷 Use of Funds
-Funding will be used to support the complete development lifecycle and sustainability of Trend Forge. This includes:
+## ✅ Long-Term Vision
 
-* DApp Development (UI/UX, frontend/backend, Teck Stack)
-* Developer & Analyst Salaries,& Journalist
-* Trend Intelligence Engine Infrastructure
-* Hosting, APIs, Cloud Services
-* Community Incentives & Pi Rewards
-* Ecosystem Integrations
-* Legal, Administrative, and Compliance Costs
-* Ai Tools, n8n Workflow,and other Subcription Ai Software
-* Planned Office Setup (as we scale)
-* Miscellaneous Costs 
+Trend Forge envisions becoming the **intelligence layer of the Pi Network**.
+As Pi continues to evolve, so will Trend Forge—offering increasingly advanced tools, insights, and analytics.
+We aim to be a foundational component of a larger network of Pi-powered DApps, guiding individuals, communities, and businesses toward informed, decentralized decision-making.
 
-All use of funds will be tracked and communicated through periodic community updates and transparent reports.
+---
 
-🔷 Our Vision
-Trend Forge aims to become the intelligence backbone of the Pi Network—where every user has access to meaningful, real-time insights. We believe decentralized data is the future, and together with Pi Network, we can make that future a reality.
+## 🔷 Purpose of This Proposal
 
-🔷 Contact Us
-Email: [mrwainorganization@gmail.com](mailto:mrwainorganization@gmail.com)
-Discord: (https://discord.gg/q37VBF5fjU)
-GitHub / Pitch Deck: (https://tinyurl.com/Trend-Forge-Pitch-Deck)
-Demo of Apps : https://x.com/mrwainofficial/status/1922903990548812200
-X : https://x.com/wainfoundation
-Website : https://tinyurl.com/Mrwain-Organization ( under develope )
-trendforge.pi (coming soon)
+We are seeking **non-equity funding support** from:
 
-🔷 Number of our Project This is 1 of 9 Pi DApps in development under mrwain — with more on the way.
+* **Pi Network Ventures**
+* **Ecosystem partners**
+* **Mission-aligned contributors**
 
-🔷 Closing Statement
-Trend Forge is more than a product — it’s a movement.
-Together with the Pi Network, we are building the future of decentralized intelligence.
+Your voluntary support will help **sustain and scale** Trend Forge in service of a **shared vision**: a decentralized knowledge system that benefits everyone.
 
-Vision Can Become Reality & We Are Building Together.
-— MrWain
+---
+
+## 🔷 Important Disclaimers
+
+Trend Forge is a **nonprofit initiative**. As such, we:
+
+* Do **not** offer **equity**, **tokens**, or **financial returns** for contributions
+* Cannot guarantee success, but pledge **100% commitment**
+* Will **not treat contributions as loans** or promise repayment
+* Emphasize that all support is **voluntary**, **at-risk**, and **mission-aligned**
+
+We are **not defining an exact funding target** upfront. Final decisions are at the discretion of the **Pi Core Team** and other partners, based on internal evaluations and risk assessments.
+
+---
+
+## 🔷 Use of Funds
+
+Funds received will be allocated to the complete development, deployment, and sustainability of Trend Forge, including:
+
+* **DApp Development** (UI/UX, frontend/backend, full tech stack)
+* **Salaries** for developers, analysts, and journalists
+* **Trend Intelligence Engine infrastructure**
+* **Cloud services**, hosting, APIs
+* **Community engagement**, gamification, and Pi-based incentive programs
+* **Integration with other Pi ecosystem tools**
+* **Legal, administrative, and compliance costs**
+* **AI tooling**, such as n8n workflows and subscription-based AI software
+* **Planned office setup** as team scales
+* **Miscellaneous operational costs**
+
+All expenditures will be **transparent** and communicated via **regular community updates and reports**.
+
+---
+
+## 🔷 Our Vision
+
+**Trend Forge will be the decentralized brain of the Pi Network.**
+Every user will be empowered with access to real-time, meaningful, and actionable intelligence.
+We believe **data belongs to the people**, and Trend Forge ensures it stays that way.
+
+---
+
+## 🔷 Contact
+
+📧 Email: [mrwainorganization@gmail.com](mailto:mrwainorganization@gmail.com)
+💬 Discord: [discord.gg/q37VBF5fjU](https://discord.gg/q37VBF5fjU)
+📁 Pitch Deck / GitHub: [tinyurl.com/Trend-Forge-Pitch-Deck](https://tinyurl.com/Trend-Forge-Pitch-Deck)
+🎥 App Demo: [Twitter Demo](https://x.com/mrwainofficial/status/1922903990548812200)
+🌐 Website (coming soon): [trendforge.pi](https://trendforge.pi)
+🌱 Organization Website: [tinyurl.com/Mrwain-Organization](https://tinyurl.com/Mrwain-Organization)
+🐦 Twitter (X): [@wainfoundation](https://x.com/wainfoundation)
+
+---
+
+## 🔷 About the MrWain DApp Ecosystem
+
+Trend Forge is **1 of 9** Pi-powered DApps currently under development by the MrWain Organization.
+Each project is focused on ethical, decentralized innovation for the Pi ecosystem.
+
+---
+
+## 🔷 Closing Statement
+
+**Trend Forge is more than a product — it’s a movement.**
+Together with the Pi Network, we are laying the foundation for the future of decentralized intelligence.
+If you believe in the power of data, community, and innovation, we invite you to build with us.
+
+> **Vision becomes reality when we build it together.**
+> — *MrWain*
+
+
