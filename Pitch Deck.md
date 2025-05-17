@@ -49,6 +49,7 @@ GitHub / Pitch Deck: (https://tinyurl.com/Trend-Forge-Pitch-Deck)
 Demo of Apps : https://x.com/mrwainofficial/status/1922903990548812200
 X : https://x.com/wainfoundation
 Website : https://tinyurl.com/Mrwain-Organization ( under develope )
+trendforge.pi (coming soon)
 
 🔷 Number of our Project This is 1 of 9 Pi DApps in development under mrwain — with more on the way.
 
