@@ -42,5 +42,5 @@ Trend Forge aims to become the intelligence backbone of the Pi Network—where e
 
 🔷 Contact Us
 Email: [mrwainorganization@gmail.com](mailto:mrwainorganization@gmail.com)
-Telegram: @MrWainCommunity
-GitHub / Pitch Deck: \[Insert Link]
+Discord: (https://discord.gg/q37VBF5fjU)
+GitHub / Pitch Deck: (https://tinyurl.com/Trend-Forge-Pitch-Deck)
