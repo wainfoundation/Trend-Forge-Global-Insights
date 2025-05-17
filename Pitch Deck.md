@@ -26,14 +26,16 @@ We cannot define the exact amount needed upfront. Final funding decisions rest s
 🔷 Use of Funds
 Funding will be used to support the complete development lifecycle and sustainability of Trend Forge. This includes:
 
-* DApp Development (UI/UX, frontend/backend, testing)
-* Developer & Analyst Salaries
+* DApp Development (UI/UX, frontend/backend, Teck Stack)
+* Developer & Analyst Salaries,& Journalist
 * Trend Intelligence Engine Infrastructure
 * Hosting, APIs, Cloud Services
 * Community Incentives & Pi Rewards
 * Ecosystem Integrations
 * Legal, Administrative, and Compliance Costs
+* Ai Tools, n8n Workflow,and other Subcription Ai Software
 * Planned Office Setup (as we scale)
+* Miscellaneous Costs 
 
 All use of funds will be tracked and communicated through periodic community updates and transparent reports.
 
@@ -44,3 +46,15 @@ Trend Forge aims to become the intelligence backbone of the Pi Network—where e
 Email: [mrwainorganization@gmail.com](mailto:mrwainorganization@gmail.com)
 Discord: (https://discord.gg/q37VBF5fjU)
 GitHub / Pitch Deck: (https://tinyurl.com/Trend-Forge-Pitch-Deck)
+Demo of Apps : https://x.com/mrwainofficial/status/1922903990548812200
+X : https://x.com/wainfoundation
+Website : https://tinyurl.com/Mrwain-Organization ( under develope )
+
+🔷 Number of our Project This is 1 of 9 Pi DApps in development under mrwain — with more on the way.
+
+🔷 Closing Statement
+Trend Forge is more than a product — it’s a movement.
+Together with the Pi Network, we are building the future of decentralized intelligence.
+
+Vision Can Become Reality & We Are Building Together.
+— MrWain
